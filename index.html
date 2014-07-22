@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budapestfly - Sétarepülés, Budapest repülőről, sétarepülés Budpesten, repülős kirándulás Budapesten</title>
     <meta name="author" content="Budapestfly - Sétarepülés, Budapest repülőről, sétarepülés Budpesten, repülős kirándulás Budapesten">
-    <meta name="description" content="Budapestfly,sétarepülés, sétarepülés Budapest felett, sétarepülés Visegrád felett, sétarepülés Balaton felett, sétarepülés Dunakanyar felett, sétarepülés Magyarország felett, sétarepülés ajándékba, repülés, repülés Velencei tó felett, sétarepülés Budaörsről, sétarepülés Budaörs, sétarepülés, repülés, cessna, eredeti ajándék, Budapest, olcsó sétarepülés, ajándék sétarepülés, ajándék repülés">
+    <meta name="description" content="Budapestfly,sétarepülés, séta aváros felett">
     <meta name="keywords" content="sétarepülés, sétarepülés Budapest felett, sétarepülés Visegrád felett, sétarepülés Balaton felett, sétarepülés Dunakanyar felett, sétarepülés Magyarország felett, sétarepülés ajándékba, repülés, repülés Velencei tó felett, sétarepülés Budaörsről, sétarepülés Budaörs, sétarepülés, repülés, cessna, eredeti ajándék, Budapest, olcsó sétarepülés, ajándék sétarepülés, ajándék repülés" />
     <link rel="stylesheet" href="css/budapestfly.css">
     <link rel="stylesheet" href="css/curtain.css">
@@ -34,6 +34,7 @@
     <li><a href="#gep" class="curtain-links">A gép</a></li>
     <li><a href="#pilota" class="curtain-links">A pilóta</a></li>
     <li><a href="#utvonal" class="curtain-links">Útvonalak</a></li>
+    <li><a href="#galeria" class="curtain-links">Galéria</a></li>
     <li><a href="#budapestflyinfo" class="curtain-links">Kapcsolat</a></li>
 </ul>
 
@@ -161,6 +162,41 @@
             </ul>
         </article>
     </li>
+    <li id="galeria"  class="cover" style="display:none">
+        <div class="fixed">
+            Galéria
+        </div>
+
+        <article>
+                <div id="kepek">
+                    <div id="slides">
+                        <div class="slides_container">
+                            <div class="slide">
+                                <img src="css/image/utasok1.jpg" width="850" height="525" alt="Slide 1">
+                            </div>
+                            <div class="slide">
+                                <img src="css/image/utasok2.jpg" width="850" height="625" alt="Slide 1">
+                            </div>
+                            <div class="slide">
+                                <img src="css/image/utasok3.jpg" width="850" height="625" alt="Slide 1">
+                            </div>
+                            <div class="slide">
+                                <img src="css/image/utasok4.jpg" width="850" height="625" alt="Slide 1">
+                            </div> 
+                            <div class="slide">
+                                <img src="css/image/utasok5.jpg" width="850" height="625" alt="Slide 1">
+                            </div>
+                            <div class="slide">
+                                <img src="css/image/utasok6.jpg" width="850" height="625" alt="Slide 1">
+                            </div>      
+                        </div>
+
+                    </div>
+                </div>
+
+
+        </article>
+    </li>
     <li id="budapestflyinfo"  class="cover" style="display:none">
         <div class="fixed">
             Kapcsolat
@@ -173,6 +209,7 @@
             <p>budapestfly@gmail.com</p>
         </article>
     </li>
+
 </ol>
 
 <div class="mobil">
@@ -198,5 +235,41 @@
         });
     }
 </script>
+
+<script src="js/slides.min.jquery.js"></script>
+    <script>
+        $(function(){
+            $('#slides').slides({
+                preload: true,
+                preloadImage: 'img/loading.gif',
+                play: 5000,
+                pause: 2500,
+                hoverPause: true,
+                animationStart: function(current){
+                    $('.caption').animate({
+                        bottom:-35
+                    },100);
+                    if (window.console && console.log) {
+                        // example return of current slide number
+                        console.log('animationStart on slide: ', current);
+                    };
+                },
+                animationComplete: function(current){
+                    $('.caption').animate({
+                        bottom:0
+                    },200);
+                    if (window.console && console.log) {
+                        // example return of current slide number
+                        console.log('animationComplete on slide: ', current);
+                    };
+                },
+                slidesLoaded: function() {
+                    $('.caption').animate({
+                        bottom:0
+                    },200);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
