@@ -233,7 +233,7 @@ list-style-type:circle;
 margin-left: 15px;
 }
 
-/*galeria*/
+/*galeria
 #galeria {
 background:#DBDAD9;
 }
@@ -253,7 +253,7 @@ text-shadow: 0 4px 4px rgba(0, 0, 0, .5);
 #galeria article{
 margin-top:5%;
 max-width: 900px;
-}
+}*/
 
 /*section 5 budapestflyinfo*/
 
@@ -336,8 +336,7 @@ text-transform: none;
 li.step{margin:1em 0 0 0;}
 
 
-/*slider*/
-
+/*slider
 #container {
 width:900px;
 padding:10px;
@@ -351,11 +350,11 @@ width:850px;
 height:525px;
 position:relative;
 top:150px;
-}
+}*/
+
 
 /*
 	Slideshow
-*/
 
 #slides {
 position:absolute;
@@ -406,4 +405,4 @@ display:block;
 
 .pagination li.current a {
 	background-position:0 -12px;
-}
+}*/
