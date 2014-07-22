@@ -189,15 +189,13 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/curtain.js"></script>
 <script>
-    if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        $(function(){
-           $('.curtains').curtain({
-               scrollSpeed: 450,
-               controls: '.menu',
-               curtainLinks: '.curtain-links'
-           });
-        });
-    }
+    $(function(){
+       $('.curtains').curtain({
+           scrollSpeed: 450,
+           controls: '.menu',
+           curtainLinks: '.curtain-links'
+       });
+    });
 </script>
 </body>
 </html>
