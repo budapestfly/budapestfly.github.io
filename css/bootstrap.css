@@ -4572,6 +4572,8 @@ a.list-group-item.active > .badge,
 .thumbnail a > img {
   margin-right: auto;
   margin-left: auto;
+  padding-top: 5%;
+
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
