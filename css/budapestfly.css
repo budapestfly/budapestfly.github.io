@@ -1,408 +1,127 @@
-
-/* Curtain.js - Budpestfly */
-
-/* RESET */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content:"";
-    display:table;
-}
-.cf:after {clear:both;}
-.cf { zoom:1;}
-
-/* Base Style */
 body {
 font:16px/1.2 "Helvetica Neue", Arial, Helvetica, sans-serif;
-color:#5B3D49;
+color:#595552;
 }
 
 h1,h2,h3,h4 {
 font-family: 'Philosopher', sans-serif;
+color: rgb(91,61,73)
 }
 
-p{margin:1em 0 0 0;}
-
-article{
-font-family: 'Cabin', sans-serif;
-margin:0 auto;
-max-width:600px;
-padding: 24px;
+/*menu++++++++++++++++++++++++*/
+.navbar-inverse {
+background-color: rgba(135, 159, 210, 0.9);
+border: none;
 }
 
-article h1{text-align:center;}
-
-.mobil {
-visibility: hidden;
-}
-
-/* Sliding panels */
-.curtains>li {
-    box-shadow:0 0 12px #666;
-    background-color: rgb(255,255,255);
-}
-.cover-background {
-    position:fixed;
-    top:0;left:0;
-}
-
-/* Specific */
-
-#mobil {
-visibility: hidden;
-}
-
-/*section 1 - budapestfly*/
-
-#budapestfly{
-background:url('image/Budapest1.jpg') 50% 60% no-repeat fixed;
--webkit-background-size: 100%; 
--moz-background-size: 100%; 
--o-background-size: 100%; 
-background-size: 100%;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-
-header {
-color:#EEEEFF;
-position:absolute;
-top:30%;
-left:30%;
-text-align:center;
-text-shadow: 0 4px 4px rgba(0, 0, 0, .5);
-}
-
-#budapestfly h1 {
-font-size:6em;
-font-weight:normal;
-}
-
-#budapestfly i {
-font-style: italic;
-}
-
-#budapestfly h2 {
-opacity:.75;
-font-size:2em;
-font-weight: normal;
-padding-top: 36px;
-}
-
-#budapestfly img {
-position: absolute;
-left: -50%;
-top:-80%;
-}
-
-/*section 2 - gep*/
-
-#gep {
-background:#DBDAD9 url('image/sasa.jpg') no-repeat fixed center;
--webkit-background-size: 100%; 
--moz-background-size: 100%; 
--o-background-size: 100%; 
-background-size: 100%;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-
-#gep .fixed {
-position: fixed;
-top: 150px;
-left: 5%;
-width: 200px;
-z-index:20;
-text-transform: uppercase;
-font-family: 'Philosopher', sans-serif;
-font-size: 2em;
-text-shadow: 0 4px 4px rgba(0, 0, 0, .5);
-}
-
-#gep article{
-margin-top:10%;
-margin-left: 25%;
-position:relative;
-z-index:20;
-background: rgba(194, 193, 189, 0.5);
-}
-
-/*section 3 - pilota*/
-
-#pilota {
-background:#DBDAD9 url('image/sasa3.jpg') no-repeat fixed;
--webkit-background-size: 100%; 
--moz-background-size: 100%; 
--o-background-size: 100%; 
-background-size: 100%;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-
-#pilota .fixed {
-position: fixed;
-top: 150px;
-left: 5%;
-width: 200px;
-z-index:20;
-text-transform: uppercase;
-font-family: 'Philosopher', sans-serif;
-font-size: 2em;
-text-shadow: 0 4px 4px rgba(0, 0, 0, .5);
-}
-
-#pilota article {
-margin-top: 10%;
-margin-left: 19%;
-z-index:20;
-background: rgba(194, 193, 189, 0.5);
-}
-
-/*section 4 - utvonal*/
-
-#utvonal{
-background: #DBDAD9;
-}
-
-#utvonal h4 {
-position: absolute;
-left: 5%;
-top:130px;
-text-transform: uppercase;
-padding-bottom: 5%;
-font-size: 2em;
-text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
-}
-
-#utvonal article {
-margin-top:5%;
-}
-
-#utvonal table {
-margin-top:5%;
-}
-
-.firstheading {
-text-align: left;
-font-size: 1em;	
-}
-
-.first {
-text-align: left;
-font-size: 1.2em;
-}
-
-th {
-text-transform: uppercase;
-font-weight: normal;
-padding-bottom: 15px;
-padding-right: 30px;
-width: 2%;
-text-align: right;
-}
-
-td {
-padding-bottom: 15px;
-padding-top: 15px;
-text-align: right;
-padding-right: 30px;
-border-bottom: 1px solid;
-vertical-align: middle;
-}
-
-
-#utvonal span {
-font-size: 0.6em;
-}
-
-
-.step-list {
-margin-top:5%;
-}
-
-#utvonal li {
-list-style-type:circle;
-margin-left: 15px;
-}
-
-/*galeria
-#galeria {
-background:#DBDAD9;
-}
-
-#galeria .fixed {
-position: fixed;
-top: 150px;
-left: 5%;
-width: 200px;
-z-index:20;
-text-transform: uppercase;
-font-family: 'Philosopher', sans-serif;
-font-size: 2em;
-text-shadow: 0 4px 4px rgba(0, 0, 0, .5);
-}
-
-#galeria article{
-margin-top:5%;
-max-width: 900px;
-}*/
-
-/*section 5 budapestflyinfo*/
-
-#budapestflyinfo {
-background:#DBDAD9;
-}
-
-#budapestflyinfo .fixed {
-position: fixed;
-top: 150px;
-left: 5%;
-width: 200px;
-z-index:20;
-text-transform: uppercase;
-font-family: 'Philosopher', sans-serif;
-font-size: 2em;
-text-shadow: 0 4px 4px rgba(0, 0, 0, .5);
-}
-
-#budapestflyinfo article{
-margin-top:10%;
-margin-left: 30%;
-position:relative;
-z-index:20;
-background: rgba(194, 193, 189, 0.5);
-}
-
-#budapestflyinfo p {
-padding-right: 5px;
-font-size: 1.5em;
-line-height: 24px;
-text-align: center;
-}
-
-#budapestflyinfo img {
-text-align: center;
-}
-/* MENU */
-#menu{
-background-color:rgba(194, 193, 189, 0.5);
-position:fixed;
-z-index:20;
-list-style-type: none;
-width: 100%;
-}
-
-#menu li {
-float: left;
+.navbar-nav li, .navbar-brand {
 font-size:18px;
 font-weight: normal;
 text-transform: uppercase;
 padding-right: 24px;
 padding-left: 24px;
-padding-top: 10px;
-padding-bottom: 10px;
 font-family: 'Philosopher', sans-serif;
 }
 
-#menu a {
+.navbar-inverse .navbar-nav li a {
 margin:0;
 color:#EEEEFF;
-text-decoration: none;
 }
 
-#menu a:hover {
+.navbar-inverse .navbar-nav li a:hover {
 color:#5A83D2;
 }
 
-#menu a:focus {
-color:#5B3D49;
+.navbar-inverse .navbar-nav li a:focus {
+color:#5A83D2;
+outline:none;
+}
+
+.navbar-inverse .navbar-nav li a:active {
+color:#5A83D2;
+outline:none;
+}
+
+.navbar-brand {
+color: rgb(91,61,73);
+}
+
+.navbar-header {
+color:#5A83D2;
 outline: none;
 }
-
-#firstmenu {
-margin-left: 45%;
-text-transform: none;
+/*section++++++++++++++++++++++++*/
+#contact {
+color:#5A83D2;
 }
 
-/* STEP BY STEP */
-li.step{margin:1em 0 0 0;}
-
-
-/*slider
-#container {
-width:900px;
-padding:10px;
-margin:0 auto;
-position:relative;
-z-index:0;
+.section-heading {
+text-align: center;
+font-size: 3em;
+text-shadow: 3px 4px 4px rgba(84, 54, 43, 0.8);
 }
 
-#kepek {
-width:850px;
-height:525px;
-position:relative;
-top:150px;
-}*/
-
-
-/*
-	Slideshow
-
-#slides {
-position:absolute;
-top:15px;
-left:4px;
-z-index:100;
+.firstheading {
+text-align: left;
+font-size: 1.1em; 
 }
 
-
-.slides_container {
-width:850px;
-overflow:hidden;
-position:relative;
-display:none;
-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
--moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
--webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+.first {
+text-align: left;
+font-size: 1em;
 }
 
-.slide {
-width:850px;
-height:525px;
-display:block;
-
+th {
+text-transform: uppercase;
+font-weight: normal;
+padding-right: 30px;
+width: 2%;
+text-align: right;
+font-size: 1.1em;
 }
 
-.pagination {
-	margin:26px auto 0;
-	width:100px;
+td {
+padding-bottom: 5px;
+padding-top: 15px;
+text-align: right;
+padding-right: 30px;
+border-bottom: 1px solid;
+vertical-align: middle;
+padding-bottom: 24px;
+padding-top: 24px;
 }
 
-.pagination li {
-	float:left;
-	margin:0 1px;
-	list-style:none;
+#utvonalak span {
+font-size: 0.7em;
 }
 
-.pagination li a {
-	display:block;
-	width:12px;
-	height:0;
-	padding-top:12px;
-	background-image:url(css/image/pagination.png);
-	background-position:0 0;
-	float:left;
-	overflow:hidden;
+#utvonalak table {
+margin-top:2%;
+color: #595552;
 }
 
-.pagination li.current a {
-	background-position:0 -12px;
-}*/
+.thumbnail > img {
+padding-top: 5%;
+}
+
+#pecset {
+position: absolute;
+left: 20%;
+}
+
+.thumbnail {
+min-height: 720px;
+-webkit-box-shadow: 7px 7px 5px 0px rgba(89, 85, 82, 0.3);
+-moz-box-shadow:    7px 7px 5px 0px rgba(89, 85, 82, 0.3);
+box-shadow:         7px 7px 5px 0px rgba(89, 85, 82, 0.3);
+}
+
+.carousel-inner {
+-webkit-box-shadow: 7px 7px 5px 5px rgba(89, 85, 82, 0.5);
+-moz-box-shadow:    7px 7px 5px 5px rgba(89, 85, 82, 0.5);
+box-shadow:         7px 7px 5px 5px rgba(89, 85, 82, 0.5);
+}
+
+#kapcsolat center {
+padding-bottom: 36px;
+}
