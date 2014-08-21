@@ -124,5 +124,10 @@ box-shadow:         7px 7px 5px 5px rgba(89, 85, 82, 0.5);
 }
 
 #kapcsolat center {
-padding-bottom: 36px;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+#kapcsolat center h2 {
+margin: 0;
 }
